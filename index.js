@@ -55,21 +55,6 @@ app.get('/:prefix', (req, res) => {
   });
 })
 
-app.get('/:prefix', (req, res) => {
-  var { prefix } = req.params;
-  if (prefix == undefined) {
-    res.send({ 'states': states })
-  }
-  prefix = prefix.toUpperCase()
-  graphql({
-    schema,
-    source: '{ states }',
-    rootValue
-  }).then((response) => {
-    var selected_states = response.data.states.filter(a => a.toUpperCase().startsWith(prefix))
-    res.send({ 'states': selected_states })
-  });
-})
 app.listen(3000, () => {
   console.log("ON PORT 3000!")
 })
