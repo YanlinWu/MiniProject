@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments Index</title>
+</head>
+
+<body>
+    <form >
+        <label for="selected_state">Choose a states:</label>
+        <select name="selected_state" id="selected_state">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br><br>
+        <button  onclick="myFunction()">submit</button>
+      </form>
+      <div >
+          <h1>map</h1>
+          <p id="show_selected">selected:</p>
+      </div>
+
+</body>
+<script> 
+    function myFunction() {
+        var a=document.getElementById("selected_state").value
+        console.log(a)
+}
+</script>
+</html>
